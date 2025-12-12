@@ -1,14 +1,14 @@
+/* :root är toppen av sidan och används för att spara färger och andra värden som hela sidan kan använda */
+:root{
+    --färg-1: #dad8e1;
+    --färg-logga: #fff2f2;
+    --text-färg: #000000;
+    --hover-färg: #fddddd;
+ 
+}
+
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.background-effect:hover {
-    background-color: lightpink;
-}
-
-.nav-link {
-    color: black;
-    text-decoration: none;
 }

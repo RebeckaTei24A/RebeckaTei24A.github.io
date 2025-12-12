@@ -1,37 +1,31 @@
 // Headern och footern laddas in i varje sida från denna fil
 
-let header = document.getElementsByTagName("header");
+// () => {} är en kortare och modernare version för function() { ... }
 
- header[0].innerHTML = `<nav>
-  <ul>
-    <li>
-      <a href="index.html" class="nav-link background-effect">Hem</a>
-    </li>
-    <li>
-      <a href="about.html" class="nav-link background-effect">Info</a>
-    </li>
-    <li>
-      <a href="tjänster.html" class="nav-link background-effect">Tjänster</a>
-    </li>
-    <li>
-      <a href="bokning.html" class="nav-link background-effect">Bokning</a>
-    </li>
-    <li>
-      <a href="inspo.html" class="nav-link background-effect">Inspo</a>
-    </li>
-    <li>
-      <a href="FAQ.html" class="nav-link background-effect">FAQ</a>
-    </li>
-    <li>
-      <a href="kontakt.html" class="nav-link background-effect">Kontakt</a>
-    </li>
-  </ul>
-</nav>`
+// aria-label används för tillgänglighet, så att skärmläsare kan förstå menyn.
 
-let footer =document.getElementsByTagName("footer")
-
-footer[0].innerHTML = `<p>&copy; 2025 Nails of Love by Rebecka - 
-        <a href="https://mail.google.com/mail/?view=cm&to=Nailsoflovebyrebecka@gmail.com" target="_blank" class="mail">Nailsoflovebyrebecka@gmail.com</a></p>`
-
-
+// if (header) kollar om header finns innan vi fyller den med menyn, för att undvika fel.
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header");
+  if (header) {
+  header.innerHTML = `<nav aria-label="Huvudmeny">
+            <a class="home-link" href="index.html">Hem</a>
+            <a href="about.html">Info</a>
+            <a href="tjänster.html">Tjänster</a>
+            <a href="bokning.html">Bokning</a>
+            <a href="inspo.html">Inspo</a>
+            <a href="FAQ.html">FAQ</a>
+            <a href="kontakt.html">Kontakt</a>
+            </nav>`;
+            
+      }
     
+  const footer = document.querySelector("footer");
+  if (footer){
+  footer.innerHTML = `
+  <p>&copy; 2025 Nails Of Love By Rebecka -
+  <a href="mailto:Nailsoflovebyrebecka@gmail.com" class="mail">Nailsoflovebyrebecka@gmail.com</a>
+  </p>
+  `;
+  }
+});
