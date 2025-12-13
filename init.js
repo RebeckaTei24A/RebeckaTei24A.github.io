@@ -5,6 +5,10 @@
 // aria-label används för tillgänglighet, så att skärmläsare kan förstå menyn.
 
 // if (header) kollar om header finns innan vi fyller den med menyn, för att undvika fel.
+
+
+                    // HEADER
+
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
   if (header) {
@@ -20,6 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
             
       }
     
+                     // FOOTER
+
   const footer = document.querySelector("footer");
   if (footer){
   footer.innerHTML = `
