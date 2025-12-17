@@ -1,12 +1,11 @@
 /* :root är toppen av sidan och används för att spara färger och andra värden som hela sidan kan använda */
 :root{
     --bakgrund-nav: #fff4ef;
-    --färg-logga: #fff2f2;
     --text-färg: #000000;
     --hover-färg: #fddddd;
     --ram-logga: #dad8e1;
     --bakgrundsfärg: #fdf6f6;
-    --bakgrund-footer: #e2e2e2;
+    --bakgrund-footer: rgb(251, 246, 255);
     --ram-färg: #fff9f6;
 }
 
@@ -130,6 +129,30 @@ header {
     font-size: clamp(1.5rem, 5vw, 3rem);
     margin-bottom: 0.5em;
     font-weight: 500;
+    font-style: italic;
+}
+
+.Välkommen P {
+    font-style: italic;
+}
+
+.Om-kort, .Populära-behandlingar, .Lite-inspo, .Boka-hem, .Snabb-info {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+
+.Om-kort p, .Snabb-info ul {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+}
+
+.Snabb-info ul {
+    list-style: none;
+    
+}
+
+.Populära-behandlingar .P-tjänster {
+    
 }
 /* ========================================================== INSPO ==================================================================== */
 
@@ -143,7 +166,7 @@ header {
 
 .item {
     padding: 1em;
-    background-color: var(--färg-logga);
+    background-color: var(--bakgrund-nav);
     color: var(--text-färg);
     text-align: center;
     border-radius: 8px;
