@@ -29,7 +29,7 @@ body {
 /* HEADER OCH NAV */
 
 
-/* MENY */
+/* ========================================= MENY ============================================== */
 header {
     background-color: var(--bakgrund-nav);
     position: sticky;
@@ -41,7 +41,7 @@ header {
     
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ====================== */
 .navbar {
     display: flex;
     align-items: center;
@@ -58,7 +58,7 @@ header {
    border-radius: 8px;
 }
 
-/* Länkar */
+/* ====== Länkar ======= */
 .nav-links {
     list-style: none;
     display: flex;
@@ -79,7 +79,7 @@ header {
     background-color: var(--hover-färg);
 }
 
-/* FÖR MOBIL */
+/* ==================================================== FÖR MOBIL ================================================== */
 .burger {
     display: none;
     font-size: 1.8rem;
@@ -126,7 +126,7 @@ header {
 
 
 
-/* FOOTER */
+/* ==================================================== FOOTER =========================================================== */
 
 footer {
     background-color: var(--bakgrund-nav);
@@ -146,7 +146,7 @@ footer a:hover {
 }
 
 
-/* INSPO */
+/* ========================================================== INSPO ==================================================================== */
 
 .grid-container {
     display: grid;
