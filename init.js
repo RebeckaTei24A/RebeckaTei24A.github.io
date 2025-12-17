@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   header.innerHTML = `
        <nav class="navbar" aria-label="Huvudmeny">
             <a class="logo" href="index.html">
-             <img src="Nails of Love.webp" alt="Nails Of Love By Rebecka">
+             <img src="NailsofLove.webp" alt="Nails Of Love By Rebecka" width="50" height="48">
             </a>
 
             <button class="burger" 
@@ -30,12 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
           <ul id="primary-nav" class="nav-links">
             <li><a href="index.html">Hem</a></li>
-            <li><a href="about.html">Info</a></li>
             <li><a href="tjänster.html">Tjänster</a></li>
             <li><a href="bokning.html">Bokning</a></li>
             <li><a href="inspo.html">Inspo</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="about.html">Info</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
            </ul>
        </nav>
        `;
@@ -86,8 +86,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
    const inspoGrid = document.querySelector(".grid-container");
    if (inspoGrid) {
-    inspoGrid.querySelectorAll("img").forEach(img => {
-      img.setAttribute("loading", "lazy");
+    const images = inspoGrid.querySelectorAll("img");
+
+    images.forEach(img => {
+      if (img.classList.contains("lcp")) {
+        img.setAttribute("fetchpriority", "high");
+        img.removeAttribute("loading");
+      } else {
+        img.setAttribute("loading", "lazy");
+      }
+      
+      
     });
 
     inspoGrid.querySelectorAll("video").forEach(video => {

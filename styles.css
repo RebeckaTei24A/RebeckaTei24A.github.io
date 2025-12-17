@@ -1,15 +1,13 @@
 /* :root är toppen av sidan och används för att spara färger och andra värden som hela sidan kan använda */
 :root{
-    --färg-1: #dad8e1;
+    --bakgrund-nav: #fff4ef;
     --färg-logga: #fff2f2;
     --text-färg: #000000;
     --hover-färg: #fddddd;
-    --text-footer: #000000;
-    --hover-footer: #fddddd;
     --ram-logga: #dad8e1;
-    --bakgrund-nav: #fff2f2;
-
- 
+    --bakgrundsfärg: #fdf6f6;
+    --bakgrund-footer: #e2e2e2;
+    --ram-färg: #fff9f6;
 }
 
 
@@ -17,19 +15,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
-    background-color: var(--färg-1);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--bakgrundsfärg);
     color: var(--text-färg);
 }
 
 
-/* HEADER OCH NAV */
 
-
-/* ========================================= MENY ============================================== */
+/* ============================================== MENY ========================================================================== */
 header {
     background-color: var(--bakgrund-nav);
     position: sticky;
@@ -37,8 +33,6 @@ header {
     width: 100%;
     z-index: 1000; /* Gör så att menyn ligger över innehållet */
     font-size: clamp(0.6rem, 4vw + 0.4rem, 1.2rem);
-    
-    
 }
 
 /* ================= NAVBAR ====================== */
@@ -48,6 +42,7 @@ header {
     justify-content: space-between;
     width: 100%;
     padding: 0.6rem 1rem;
+    border-bottom: 16px solid var(--ram-färg);
 }
 
 .logo img {
@@ -79,7 +74,7 @@ header {
     background-color: var(--hover-färg);
 }
 
-/* ==================================================== FÖR MOBIL ================================================== */
+/* ==================================================== FÖR MOBIL ======================================================== */
 .burger {
     display: none;
     font-size: 1.8rem;
@@ -124,56 +119,47 @@ header {
     }
 }
 
+/* ========================================================== STARTSIDA ==================================================================== */
 
-
-/* ==================================================== FOOTER =========================================================== */
-
-footer {
-    background-color: var(--bakgrund-nav);
+.Välkommen {
     text-align: center;
-    width: 100%;
-    font-size: clamp(0.4rem, 4vw + 0.2rem, 1rem);
+    padding: 3em 1em;
 }
 
-footer a {
-    text-decoration: none;
-    color: var(--text-footer);
-    border-radius: 6px;
+.Välkommen h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    margin-bottom: 0.5em;
+    font-weight: 500;
 }
-
-footer a:hover {
-    background-color: var(--hover-footer);
-}
-
-
 /* ========================================================== INSPO ==================================================================== */
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 350px));
-    gap: 4em;
+    gap: 3em;
     padding: 1em;
     justify-content: center;
 }
 
 .item {
-    padding: 0.5em;
+    padding: 1em;
     background-color: var(--färg-logga);
     color: var(--text-färg);
     text-align: center;
     border-radius: 8px;
     font-size: clamp(0.4rem, 4vw + 0.2rem, 1rem);
-    
+    border: 8px solid var(--ram-färg);
 }
 
 .item-ny {
-    padding: 0.5em;
+    padding: 1em;
     background-color: var(--färg-logga);
     color: var(--text-färg);
     text-align: center;
     border-radius: 8px;
     font-size: clamp(0.4rem, 4vw + 0.2rem, 1rem);
-    height: 550px;
+    height: 580px;
+    border: 8px solid var(--ram-färg);
 }
 
 .item-ny img {
@@ -192,5 +178,24 @@ footer a:hover {
 
 .insta {
     margin-top: 1%;
+}
+
+/* ==================================================== FOOTER =========================================================== */
+
+footer {
+    background-color: var(--bakgrund-footer);
+    text-align: center;
+    width: 100%;
+    font-size: clamp(0.4rem, 4vw + 0.2rem, 1rem);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--text-färg);
+    border-radius: 6px;
+}
+
+footer a:hover {
+    background-color: var(--hover-färg);
 }
 
