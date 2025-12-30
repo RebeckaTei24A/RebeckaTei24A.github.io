@@ -154,11 +154,15 @@ header {
 .Populära-behandlingar .P-tjänster {
     
 }
+
+.Inspo {
+   
+}
 /* ========================================================== INSPO ==================================================================== */
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 350px));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 400px));
     gap: 3em;
     padding: 1em;
     justify-content: center;
@@ -176,24 +180,24 @@ header {
 
 .item-ny {
     padding: 1em;
-    background-color: var(--färg-logga);
+    background-color: var(--bakgrund-nav);
     color: var(--text-färg);
     text-align: center;
     border-radius: 8px;
     font-size: clamp(0.4rem, 4vw + 0.2rem, 1rem);
-    height: 580px;
+    height: 560px;
     border: 8px solid var(--ram-färg);
 }
 
 .item-ny img {
-    width: 100%;
+    width: 344px;
     height: 500px;
     object-fit: cover;
     border-radius: 8px;
 }
 
 .item img, .item video {
-    width: 100%;
+    width: 344px;
     height: 500px;
     object-fit: cover;
     border-radius: 8px;
