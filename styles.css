@@ -7,6 +7,8 @@
     --bakgrundsfärg: #fdf6f6;
     --bakgrund-footer: rgb(251, 246, 255);
     --ram-färg: #fff9f6;
+    --tjänster-färg: #f1ecf8;
+    --border-färg: #ffffff;
 }
 
 
@@ -122,6 +124,22 @@ header {
     .nav-links a {
         padding: 0.5rem 0.6rem;
     }
+
+    .tjänster-kategorier {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tjänst-kort {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tjänst-bild {
+        width: 100%;
+        max-width: 350px;
+        margin-top: 1em;
+    }
 }
 
 /* ========================================================== STARTSIDA ==================================================================== */
@@ -138,14 +156,14 @@ header {
     font-style: italic;
 }
 
-.Välkommen P {
+.Välkommen p {
     font-style: italic;
     font-size: clamp(1rem, 3vw, 1.5rem);
     font-weight: 100;
 }
 
 .Om-kort, .Populära-behandlingar, .Lite-inspo, .Boka-hem, .Snabb-info {
-    max-width: 1800px;
+    max-width: 2000px;
     margin: 2em auto;
     padding: 0 1em;
     font-size: clamp(0.8rem, 2.5vw, 1.2rem);
@@ -167,6 +185,144 @@ header {
 .Inspo {
    
 }
+
+
+
+/* ========================================================== TJÄNSTER ==================================================================== */
+
+.tjänster-intro {
+    text-align: center;
+    padding: 3em 1em;
+}
+
+.tjänster-intro h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-style: italic;
+    margin-bottom: 0.5em;
+    font-weight: 500;
+}
+
+.tjänster-intro p {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-style: italic;
+    font-weight: 300;
+}
+
+
+.tjänster-kategorier {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+    padding: 2em 1em;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.kategori {
+    background: var(--tjänster-färg);
+    padding: 1.5em;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--border-färg);
+    margin: 0.5em;
+}
+
+.kategori h3 {
+    margin-bottom: 0.5em;
+}
+
+
+.tjänst-kort {
+    display: flex;
+    gap: 2em;
+    padding: 2em;
+    background: var(--tjänster-färg);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    align-items: flex-start;
+    margin: 3em auto;
+    max-width: 2200px;
+    border: 1px solid var(--border-färg);
+}
+
+.tjänst-innehåll {
+    flex: 1;
+}
+
+.tjänst-rubrik {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    margin-bottom: 1em;
+    font-weight: 540;
+    text-shadow: 2px 4px 0 rgb(215, 219, 255);
+    text-decoration: underline;
+}
+
+.tjänst-rubrik2 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 540;
+    text-shadow: 2px 4px 0 rgb(215, 219, 255);
+    text-decoration: underline;
+}
+
+.tjänst-nivå {
+    margin-bottom: 2em;
+}
+
+.tjänst-nivå h3 {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-weight: 300;
+    margin-bottom: 0.3em;
+}
+
+.tjänst-kort p {
+    margin-bottom: 0.5em;
+    font-size: clamp(0.8rem, 2.5vw, 1.4rem);
+}
+
+.pris {
+    font-weight: bold;
+}
+
+.tjänst-bild {
+    width: 280px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.tjänster-extras {
+    display: flex;
+    gap: 2em;
+    padding: 2em;
+    background: var(--tjänster-färg);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    align-items: flex-start;
+    margin: 3em 1em;
+    max-width: 2200px;
+    border: 1px solid var(--border-färg);
+    max-width: 2200px;
+    margin: 3em auto;
+    flex-direction: column;
+}
+
+.tjänster-extras ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tjänster-extras li {
+    margin-bottom: 0.5em;
+    display: flex;
+    font-size: clamp(0.8rem, 2.5vw, 1.4rem);
+}
+
+.prisX {
+    font-weight: bold;
+    padding-left: 0.4em;
+}
+
 /* ========================================================== INSPO ==================================================================== */
 
 .grid-container {
@@ -199,14 +355,14 @@ header {
 }
 
 .item-ny img {
-    width: 344px;
+    width: 100%;
     height: 500px;
     object-fit: cover;
     border-radius: 8px;
 }
 
 .item img, .item video {
-    width: 344px;
+    width: 100%;
     height: 500px;
     object-fit: cover;
     border-radius: 8px;
