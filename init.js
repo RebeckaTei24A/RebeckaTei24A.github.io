@@ -106,3 +106,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
    });
+
+
+
+
+   // ============================= FAQ FRÅGOR KNAPP ==================================================================================
+
+  
+   document.querySelectorAll(".F-kategori-H2").forEach(button => {
+    button.addEventListener("click", () => {
+      const innehåll = button.nextElementSibling;
+      innehåll.classList.toggle("visas");
+    });
+   });
+
+   document.querySelectorAll(".F-rubrik").forEach(button => {
+    button.addEventListener("click", () => {
+      const svar = button.nextElementSibling;
+      svar.classList.toggle("visas");
+    });
+   });

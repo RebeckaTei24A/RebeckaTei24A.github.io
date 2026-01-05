@@ -97,7 +97,8 @@ header {
 
 @media (max-width: 770px) {
     .logo img {
-        height: 50px;
+        height: 48px;
+        width: 50px;
         border: 1px solid var(--ram-logga);
     }
     .burger {
@@ -672,6 +673,8 @@ header {
     font-weight: 300;
 }
 
+
+
 /* ==================================================== KONTAKT =========================================================== */
 
 .Kontakt-intro {
@@ -692,6 +695,74 @@ header {
     font-weight: 300;
 }
 
+.Kontaktuppgifter {
+    display: flex;
+    gap: 2em;
+    padding: 2em;
+    background: var(--tjänster-färg);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    align-items: flex-start;
+    margin: 3em auto;
+    max-width: 2200px;
+    border: 4px solid var(--border-färg);
+    width: 94%;
+    margin-bottom: 5em;
+}
+
+.Kontaktuppgifter h2 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-weight: 500;
+    text-shadow: 2px 4px 0 rgb(215, 219, 255);
+    margin-bottom: 1em;
+    text-decoration: underline;
+}
+
+.Kontaktuppgifter p {
+    margin-bottom: 1.5em;
+    font-size: clamp(1rem, 3vw, 1.8rem);
+    font-weight: bold;
+}
+
+.Kontakt-M {
+    text-decoration: none;
+    color: #000000;
+    border-radius: 6px;
+    font-weight: 300;
+
+}
+
+.Kontaktuppgifter a:hover {
+    background-color: var(--hover-färg);
+}
+
+.Adress {
+    display: flex;
+    gap: 2em;
+    padding: 2em;
+    background: var(--tjänster-färg);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    align-items: flex-start;
+    margin: 3em auto;
+    max-width: 2200px;
+    border: 4px solid var(--border-färg);
+    width: 94%;
+    margin-bottom: 5em;
+}
+
+.Adress h2 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-weight: 500;
+    text-shadow: 2px 4px 0 rgb(215, 219, 255);
+    margin-bottom: 1em;
+    text-decoration: underline;
+}
+
+.Adress p {
+    margin-bottom: 1.5em;
+    font-size: clamp(1rem, 3vw, 1.8rem);
+}
 
 /* ==================================================== FAQ =========================================================== */
 
@@ -717,6 +788,88 @@ header {
     background-color: var(--hover-färg);
 }
 
+
+.Frågor {
+    max-width: 2200px;
+    margin: 0 auto 5em auto;
+    width: 94%;
+}
+
+
+.Frågor-kategori {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 2em;
+    background: var(--tjänster-färg);
+    border-radius: 12px;
+    border: 4px solid var(--border-färg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin: 3em auto;
+}
+
+.F-kategori-H2 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-weight: 500;
+    text-shadow: 2px 4px 0 rgb(215, 219, 255);
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 0.5em;
+    text-decoration: underline;
+}
+
+.F-kategori-innehåll {
+    display: none;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.F-kategori-innehåll.visas {
+    display: flex;
+}
+
+.Fråga {
+    padding-top: 1em;
+}
+
+.F-rubrik {
+    font-size: clamp(1rem, 3vw, 1.8rem);
+    font-weight: bold;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    padding: 0.3em 0;
+}
+
+.F-svar {
+    display: none;
+    padding-bottom: 1em;
+    margin-top: 1em;
+}
+
+.F-svar p {
+    font-size: clamp(1rem, 3vw, 1.8rem);
+}
+
+.F-svar.visas {
+    display: block;
+}
+
+.F-svar a {
+    font-weight: 300;
+    text-decoration: none;
+    color: var(--länk);
+    font-size: clamp(1rem, 3vw, 1.8rem);
+}
+
+.Bokning-länk {
+    text-decoration: none;
+    color: var(--länk);
+}
 
 /* ==================================================== FOOTER =========================================================== */
 
