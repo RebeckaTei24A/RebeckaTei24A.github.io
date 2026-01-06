@@ -39,6 +39,18 @@ document.addEventListener("DOMContentLoaded", () => {
            </ul>
        </nav>
        `;
+
+
+// ----------- MARKERA AKTIV SIDA -----------
+       const currentPath = decodeURIComponent(window.location.pathname).split("/").pop() || "index.html";
+       const navLinksA = header.querySelectorAll(".nav-links a");
+
+       navLinksA.forEach(link => {
+        if (link.getAttribute("href") === currentPath) {
+          link.style.backgroundColor = "var(--hover-färg)"; 
+          link.style.fontWeight = "bold";
+        }
+       });
             
       }
     

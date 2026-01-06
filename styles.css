@@ -5,11 +5,12 @@
     --hover-färg: #fddddd;
     --ram-logga: #dad8e1;
     --bakgrundsfärg: #fdf6f6;
-    --bakgrund-footer: rgb(251, 246, 255);
+    --bakgrund-footer: rgb(241, 226, 255);
     --ram-färg: #fff9f6;
     --tjänster-färg: #f3f2f7;
     --border-färg: #ffffff;
     --länk: #4d2eff;
+    --ram-f: #ffffff;
 }
 
 
@@ -30,6 +31,43 @@ body {
 
 main {
     flex: 1;
+}
+
+
+
+
+/* ================ GEMENSAM STIL FÖR ALLA BOXAR/KORT ====================== */
+.Om-kort-info, 
+.P-tjänst, 
+.Boka-hem p, 
+.Info-under, 
+.tjänst-kort, 
+.boka-tid, 
+.Kontaktuppgifter, 
+.Adress, 
+.Frågor-kategori, 
+.Info-profil-box, 
+.Inspo-kort {
+    background: var(--tjänster-färg);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 4px solid var(--border-färg);
+    width: 94%;
+    max-width: 2200px;
+    margin: 3em auto;
+    padding: 2em;
+}
+
+.Om-kort-info, 
+.P-tjänst,  
+.boka-tid, 
+.Kontaktuppgifter, 
+.Adress {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: flex-start;
+    text-align: left;
 }
 
 
@@ -140,12 +178,35 @@ header {
     .tjänst-kort {
         flex-direction: column;
         text-align: center;
+        align-items: center;
+        padding: 2em 1em;
     }
 
     .tjänst-bild {
         width: 100%;
         max-width: 300px;
         margin-top: 1em;
+    }
+
+    .profil-bild {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .tjänst-innehåll ul {
+        display: inline-block;
+        text-align: left;
+        margin: 1.5em 0;
+    }
+
+    .tjänst-innehåll li {
+        justify-content: space-between;
+        gap: 2em;
+        padding-bottom: 5px;
+    }
+    .AI p {
+        margin-top: 0.5em;
+        margin-bottom: 1.5em;
     }
 
 }
@@ -186,20 +247,6 @@ header {
     text-shadow: 2px 4px 0 rgb(215, 219, 255);
 }
 
-.Om-kort-info {
-    display: flex;
-    gap: 2em;
-    padding: 2em;
-    background: var(--tjänster-färg);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    align-items: flex-start;
-    margin: 3em auto;
-    max-width: 2200px;
-    border: 4px solid var(--border-färg);
-    width: 94%;
-    flex-direction: column;
-}
 
 .Om-kort-info h3 {
     font-size: clamp(1.2rem, 4vw, 2rem);
@@ -251,21 +298,6 @@ header {
     color:var(--länk);
 }
 
-.P-tjänst {
-    display: flex;
-    gap: 2em;
-    padding: 2em;
-    background: var(--tjänster-färg);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    align-items: flex-start;
-    margin: 3em auto;
-    max-width: 2200px;
-    border: 4px solid var(--border-färg);
-    width: 94%;
-    flex-direction: column;
-}
-
 
 /* ------ boka ------ */
 
@@ -284,16 +316,6 @@ header {
 
 .Boka-hem p {
     gap: 2em;
-    padding: 2em;
-    background: var(--tjänster-färg);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    align-items: flex-start;
-    margin: 3em auto;
-    max-width: 2200px;
-    border: 4px solid var(--border-färg);
-    width: 94%;
-    flex-direction: column;
     font-size: clamp(0.8rem, 2.5vw, 1.4rem);
 }
 
@@ -307,17 +329,55 @@ header {
 
 .Lite-inspo {
     padding: 3em 1em;
+    text-align: center;
 }
 
 .Lite-inspo h2 {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: 300;
     margin-top: 1.5em;
-    text-align: center;
     margin-bottom: 0.5em;
     text-shadow: 2px 4px 0 rgb(215, 219, 255);
 }
 
+.Inspo-behållare {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    padding: 2em 1em;
+}
+
+.Inspo-kort {
+    background: var(--tjänster-färg);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: 4px solid var(--border-färg);
+    width: 360px;
+    padding: 20px;
+    margin: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+.Inspo-kort img {
+    width: 300px;
+    height: 400.5px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.Inspo-kort img:hover {
+    transform: scale(1.05);
+}
+
+.Lite-inspo a {
+    text-decoration: none;
+    color:var(--länk);
+
+}
 
 /* ------ snabb info ------ */
 
@@ -336,16 +396,6 @@ header {
 
 .Info-under {
     gap: 2em;
-    padding: 2em;
-    background: var(--tjänster-färg);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    align-items: flex-start;
-    margin: 3em auto;
-    max-width: 2200px;
-    border: 4px solid var(--border-färg);
-    width: 94%;
-    flex-direction: column;
 }
 
 .Snabb-info p {
@@ -414,17 +464,9 @@ header {
 
 
 .tjänst-kort {
-    display: flex;
     gap: 2em;
-    padding: 2em;
-    background: var(--tjänster-färg);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
     align-items: flex-start;
-    margin: 3em auto;
-    max-width: 2200px;
-    border: 4px solid var(--border-färg);
-    width: 94%;
 }
 
 .tjänst-innehåll {
@@ -471,6 +513,11 @@ header {
     border-radius: 10px;
     object-fit: cover;
     border: 2px solid white;
+    transition: transform 0.5s ease;
+}
+
+.tjänst-bild:hover {
+    transform: scale(1.1);
 }
 
 .AI {
@@ -478,36 +525,26 @@ header {
 }
 
 .AI p {
-    font-size: clamp(0.4rem, 2vw, 0.8rem);
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
+    margin-top: 1.5em;
+    font-style: italic;
+    color: #666;
+}
+
+.AI a {
+    text-decoration: none;
+    color: var(--länk);
 }
     
 
 
-
-.tjänster-extras {
-    display: flex;
-    gap: 2em;
-    padding: 2em;
-    background: var(--tjänster-färg);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    align-items: flex-start;
-    margin: 3em 1em;
-    max-width: 2200px;
-    border: 4px solid var(--border-färg);
-    max-width: 2200px;
-    margin: 3em auto;
-    flex-direction: column;
-    width: 94%;
-}
-
-.tjänster-extras ul {
+.tjänst-innehåll ul {
     list-style: none;
     padding: 0;
 }
 
-.tjänster-extras li {
-    margin-bottom: 0.5em;
+.tjänst-innehåll li {
+    margin-top: 1.5em;
     display: flex;
     font-size: clamp(0.8rem, 2.5vw, 1.4rem);
 }
@@ -545,17 +582,6 @@ header {
 }
 
 .boka-tid {
-    display: flex;
-    gap: 2em;
-    padding: 2em;
-    background: var(--tjänster-färg);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    align-items: flex-start;
-    margin: 3em auto;
-    max-width: 2200px;
-    border: 4px solid var(--border-färg);
-    width: 94%;
     margin-bottom: 5em;
 }
 
@@ -639,6 +665,8 @@ header {
     height: 500px;
     object-fit: cover;
     border-radius: 8px;
+    transition: transform 0.5s ease;
+
 }
 
 .item img, .item video {
@@ -646,6 +674,19 @@ header {
     height: 500px;
     object-fit: cover;
     border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.item-ny img:hover {
+    transform: scale(1.1);
+}
+
+.item img:hover {
+    transform: scale(1.1);
+}
+
+.item video:hover {
+    transform: scale(1.1);
 }
 
 .insta {
@@ -673,7 +714,55 @@ header {
     font-weight: 300;
 }
 
+.Om-mig-behållare {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
+.Info-profil-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.Info-profil-box h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 4px 0 rgb(215, 219, 255);
+}
+
+.Info-profil-box p {
+    margin-bottom: 0.5em;
+    font-size: clamp(0.8rem, 2.5vw, 1.4rem);
+}
+
+.profil-bilder-grupp {
+    display: flex;
+    justify-content: center;
+    gap: 3.2em;
+    margin: 2em 0;
+    flex-wrap: wrap;
+}
+
+
+.profil-bild {
+    width: 45%;
+    max-width: 250px;
+    border-radius: 18%;
+    object-fit: cover;
+    border: 5px solid var(--border-färg);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.profil-bild:hover {
+    transform: scale(1.4);
+}
 
 /* ==================================================== KONTAKT =========================================================== */
 
@@ -696,17 +785,6 @@ header {
 }
 
 .Kontaktuppgifter {
-    display: flex;
-    gap: 2em;
-    padding: 2em;
-    background: var(--tjänster-färg);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    align-items: flex-start;
-    margin: 3em auto;
-    max-width: 2200px;
-    border: 4px solid var(--border-färg);
-    width: 94%;
     margin-bottom: 5em;
 }
 
@@ -737,17 +815,6 @@ header {
 }
 
 .Adress {
-    display: flex;
-    gap: 2em;
-    padding: 2em;
-    background: var(--tjänster-färg);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    align-items: flex-start;
-    margin: 3em auto;
-    max-width: 2200px;
-    border: 4px solid var(--border-färg);
-    width: 94%;
     margin-bottom: 5em;
 }
 
@@ -797,15 +864,7 @@ header {
 
 
 .Frågor-kategori {
-    display: flex;
-    flex-direction: column;
     gap: 1em;
-    padding: 2em;
-    background: var(--tjänster-färg);
-    border-radius: 12px;
-    border: 4px solid var(--border-färg);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    margin: 3em auto;
 }
 
 .F-kategori-H2 {
@@ -878,12 +937,17 @@ footer {
     text-align: center;
     width: 100%;
     font-size: clamp(0.4rem, 4vw + 0.2rem, 1rem);
+    border-top: 16px solid var(--ram-f);
+    padding: 1.5em;
+    padding-bottom: 2.5em;
 }
 
 footer a {
     text-decoration: none;
     color: var(--text-färg);
+    padding: 0.3rem 0.4rem;
     border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 footer a:hover {
