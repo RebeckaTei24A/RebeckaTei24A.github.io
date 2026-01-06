@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (footer){
   footer.innerHTML = `
   <p>
-  &copy; 2025 Nails Of Love By Rebecka -
+  &copy; 2026 Nails Of Love By Rebecka -
   <a href="mailto:Nailsoflovebyrebecka@gmail.com" class="mail">Nailsoflovebyrebecka@gmail.com
   </a>
   </p>
