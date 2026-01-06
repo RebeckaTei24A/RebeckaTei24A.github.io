@@ -235,7 +235,7 @@ header {
 /* ------ kort presentation ------ */
 
 .Om-kort:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .Om-kort {
@@ -273,7 +273,7 @@ header {
 /* ------ populära behandlingar ------ */
 
 .Populära-behandlingar:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .Populära-behandlingar {
@@ -312,7 +312,7 @@ header {
 /* ------ boka ------ */
 
 .Boka-hem:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .Boka-hem {
@@ -343,7 +343,7 @@ header {
 /* ------ lite insperation med bilder ------ */
 
 .Lite-inspo:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .Lite-inspo {
@@ -402,7 +402,7 @@ header {
 /* ------ snabb info ------ */
 
 .Snabb-info:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .Snabb-info {
@@ -542,7 +542,7 @@ header {
 }
 
 .tjänst-bild:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .AI {
@@ -606,7 +606,7 @@ header {
     font-weight: 300;
 }
 .boka-tid:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .boka-tid {
@@ -707,15 +707,15 @@ header {
 }
 
 .item-ny img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .item img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .item video:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .insta {
@@ -751,7 +751,7 @@ header {
 }
 
 .Info-profil-box:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .Info-profil-box {
@@ -819,7 +819,7 @@ header {
 }
 
 .Kontaktuppgifter:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .Kontaktuppgifter {
@@ -854,7 +854,7 @@ header {
 }
 
 .Adress:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .Adress {
