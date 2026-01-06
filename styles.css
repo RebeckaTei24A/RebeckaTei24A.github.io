@@ -234,9 +234,14 @@ header {
 
 /* ------ kort presentation ------ */
 
+.Om-kort:hover {
+    transform: scale(1.1);
+}
+
 .Om-kort {
     padding: 3em 1em;
     text-align: center;
+    transition: transform 0.5s ease;
 }
 
 .Om-kort h2 {
@@ -267,9 +272,14 @@ header {
 
 /* ------ populära behandlingar ------ */
 
+.Populära-behandlingar:hover {
+    transform: scale(1.1);
+}
+
 .Populära-behandlingar {
     padding: 0.1em 1em;
     text-align: center;
+    transition: transform 0.5s ease;
 }
 
 
@@ -301,9 +311,14 @@ header {
 
 /* ------ boka ------ */
 
+.Boka-hem:hover {
+    transform: scale(1.1);
+}
+
 .Boka-hem {
     padding: 3em 1em;
     text-align: center;
+    transition: transform 0.5s ease;
 }
 
 .Boka-hem h2 {
@@ -327,9 +342,14 @@ header {
 
 /* ------ lite insperation med bilder ------ */
 
+.Lite-inspo:hover {
+    transform: scale(1.1);
+}
+
 .Lite-inspo {
     padding: 3em 1em;
     text-align: center;
+    transition: transform 0.5s ease;
 }
 
 .Lite-inspo h2 {
@@ -381,9 +401,14 @@ header {
 
 /* ------ snabb info ------ */
 
+.Snabb-info:hover {
+    transform: scale(1.1);
+}
+
 .Snabb-info {
     padding: 3em 1em;
     text-align: center;
+    transition: transform 0.5s ease;
 }
 
 .Snabb-info h2 {
@@ -580,9 +605,13 @@ header {
     font-style: italic;
     font-weight: 300;
 }
+.boka-tid:hover {
+    transform: scale(1.1);
+}
 
 .boka-tid {
     margin-bottom: 5em;
+    transition: transform 0.5s ease;
 }
 
 .boka-tid h2 {
@@ -721,12 +750,17 @@ header {
     width: 100%;
 }
 
+.Info-profil-box:hover {
+    transform: scale(1.1);
+}
+
 .Info-profil-box {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
     align-items: flex-start;
     text-align: left;
+    transition: transform 0.5s ease;
 }
 
 .Info-profil-box h2 {
@@ -784,8 +818,13 @@ header {
     font-weight: 300;
 }
 
+.Kontaktuppgifter:hover {
+    transform: scale(1.1);
+}
+
 .Kontaktuppgifter {
     margin-bottom: 5em;
+    transition: transform 0.5s ease;
 }
 
 .Kontaktuppgifter h2 {
@@ -814,8 +853,13 @@ header {
     background-color: var(--hover-färg);
 }
 
+.Adress:hover {
+    transform: scale(1.1);
+}
+
 .Adress {
     margin-bottom: 5em;
+    transition: transform 0.5s ease;
 }
 
 .Adress h2 {
